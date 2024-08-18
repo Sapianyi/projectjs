@@ -1,6 +1,6 @@
 // 1) Автоматизировать вопросы пользователю про фильмы при помощи цикла
 
-// 2) Сделать так, чтобы пользователь не мог оставить ответ в виде пустой строки,
+//  2) Сделать так, чтобы пользователь не мог оставить ответ в виде пустой строки,
 //   отменить ответ или ввести название фильма длинее, чем 50 символов.Если это происходит -
 //     возвращаем пользователя к вопросам опять
 
@@ -12,11 +12,7 @@
 
 "use strict";
 
-let numberOfFilms = +prompt('Сколько фильмов вы уже посмотрели?', '');
-
-while (numberOfFilms < 1) {
-  numberOfFilms = +prompt('Сколько фильмов вы уже посмотрели?', '');
-}
+const numberOfFilms = +prompt('Сколько фильмов вы уже посмотрели?', '');
 
 const personalMovieDB = {
   count: numberOfFilms,
@@ -26,30 +22,24 @@ const personalMovieDB = {
   privat: false
 };
 
-
 for (let i = 0; i < 2; i++){
   const a = prompt('Один из последних просмотренных фильмов?', ''),
-        b = +prompt('На сколько оцените его?', '');
-      if (a != null && b != null && a != '' && b != '' && a.length < 20){
-        personalMovieDB.movies[a] = b;
-        console.log('done');
-      } else{
-        console.log('error');
-        i--;
-      }
-        }
+        b = prompt('На сколько оцените его?', '');
 
+  if(a != null && b != null && a != '' && b != '' && a.length < 50){
+    personalMovieDB.movies[a] = b;
+  } else {
+    i--;
+  }
 
+}
 
-
-if (personalMovieDB.count < 10) {
+if (numberOfFilms < 10){
   alert("Просмотрено довольно мало фильмов");
-} else if (personalMovieDB.count >= 10 && personalMovieDB.count < 30) {
-  alert("Вы классический зритель");
-} else if (personalMovieDB.count >= 30) {
+} else if (numberOfFilms > 30){
   alert("Вы киноман");
-} else {
-  alert("Произошла ошибка");
+} else{
+  alert("Вы классический зритель");
 }
 
 

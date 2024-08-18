@@ -1,34 +1,34 @@
 "use strict";
 
-if (4 == 9) {
-  console.log('OK');
-} else {
-  console.log('Error');
+if (4 == 9){
+  console.log('Ok!');
+} else{
+  console.log('Err!');
 }
 
 const num = 50;
 if (num < 49){
-  console.log('Error');
-} else if (num > 100) {
-  console.log('big');
-} else {
-  console.log('Ok');
+  console.log("ERR");
+} else if (num > 100){
+  console.log("Mnogo");
+} else{
+  console.log("OK");
 }
 
-(num === 50) ? console.log('OK') : console.log('ERROR');
+(num === 50) ? console.log('ok!') : console.log("ERR");
 
-
-const numS = 50;
-switch (numS) {
+switch (num) {
   case 49: 
-    console.log("Nit");
+    console.log('Net');
     break;
   case 100:
-    console.log('Mnogo');
+    console.log("Mnogo");
     break;
   case 50:
-    console.log('Ok!');
+    console.log("Ok");
     break;
   default:
-    console.log('...');
+    console.log(">>>");
+    break;
 }
+ 
