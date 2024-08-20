@@ -1,6 +1,7 @@
 'use strict';
 
 function first() {
+  //d ....
   setTimeout(function () {
     console.log(1);
   }, 500);
@@ -19,7 +20,7 @@ function learnJS(lang, callback) {
 }
 
 function done() {
-  console.log('Y proshol etot urok');
+  console.log('Я прошол єтот урок');
 }
 
-learnJS('J S', done);
+learnJS('JavaScript', done);
